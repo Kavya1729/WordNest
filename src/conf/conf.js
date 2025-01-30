@@ -7,4 +7,9 @@ const conf = {
 
 }
 
+// console.log("Appwrite URL:", conf.appwriteUrl);
+// console.log("Appwrite Project ID:", conf.appwriteProjectId);
+// console.log("Appwrite Database ID:", conf.appwriteDatabaseId);
+// console.log("Appwrite Collection ID:", conf.appwriteCollectionId);
+// console.log("Appwrite Bucket ID:", conf.appwriteBucketId);
 export default conf
