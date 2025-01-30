@@ -5,17 +5,113 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/* Button-like Navigation Links (Home, Add Post, All Posts) */
+.neon__button {
+  position: relative;
+  display: inline-block;
+  padding: 15px 20px;
+  margin: 0 10px;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 2px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  overflow: hidden;
+  border: 2px solid transparent;
+  border-radius: 9999px; /* Large radius for more curved button */
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.neon__button:hover {
+  background-color: #49d277;
+  color: #050801;
+  box-shadow: 0 0 5px #49d277,
+              0 0 25px #49d277,
+              0 0 50px #49d277,
+              0 0 200px #49d277;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+
+.neon__button span {
+  position: absolute;
+  display: block;
+}
+
+.neon__button span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #49d277);
+  animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+
+.neon__button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #49d277);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+
+.neon__button span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #49d277);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.50s;
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%, 100% {
+    right: 100%;
+  }
+}
+
+.neon__button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #49d277);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
 }
 
 @keyframes logo-spin {
