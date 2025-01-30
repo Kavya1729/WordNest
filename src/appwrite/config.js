@@ -30,7 +30,7 @@ export class Service {
                 }
             )
         } catch (error) {
-            console.log("Appwrite service :: createPost :: error", error);
+            console.log(error);
         }
     }
 
@@ -48,7 +48,7 @@ export class Service {
                 }
             )
         } catch (error) {
-            console.log("Appwrite service :: updatePost :: error", error);
+            console.log(error);
         }
     }
 
@@ -61,7 +61,7 @@ export class Service {
             )
             return true;
         } catch (error) {
-            console.log("Appwrite service :: deletePost :: error", error);
+            console.log(error);
             return false;
         }
     }
@@ -74,7 +74,7 @@ export class Service {
                 slug
             )
         } catch (error) {
-            console.log("Appwrite service :: getPost :: error", error);
+            console.log(error);
             return false;
         }
     }
@@ -87,7 +87,7 @@ export class Service {
                 queries,
             )
         } catch (error) {
-            console.log("Appwrite service :: getPosts :: error", error);
+            console.log(error);
             return false;
         }
     }
@@ -101,7 +101,7 @@ export class Service {
                 file
             );
         } catch (error) {
-            console.log("Appwrite service :: uploadFile :: error", error);
+            console.log(error);
             return false;
         }
     }
@@ -114,7 +114,7 @@ export class Service {
             )
             return true;
         } catch (error) {
-            console.log("Appwrite service :: deleteFile :: error", error);
+            console.log(error);
             return false;
         }
     }
